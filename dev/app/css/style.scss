@@ -1,0 +1,144 @@
+@import 'fonts';
+@import 'variables';
+
+.portfolio__title {
+	font-family: $section-title;
+	font-size: 24px;
+	color: $title-color;
+	text-transform: uppercase;
+	margin-bottom: 50px;
+	font-weight: 600;
+}
+
+.portfolio__gallery {
+	&_block {
+		padding: 0;
+		margin: 0;
+	}
+	&_link {
+		display: block;
+		position: relative;
+		overflow: hidden;
+	}
+	&_img {
+		display: block;
+		position: relative;
+		max-width: 100%;
+		figcaption {
+			position: absolute;
+			bottom: -50px;
+			left: 0;
+			width: 100%;
+			padding: 10px 0;
+			text-align: center;
+			background: $lead-color;
+			color: #fff;
+			font: bold 16px/20px $font-descr;
+			-webkit-transition: all 0.5s ease-out;
+			-moz-transition: all 0.5s ease-out;
+			-ms-transition: all 0.5s ease-out;
+			-o-transition: all 0.5s ease-out;
+			transition: all 0.5s ease-out;
+		}
+	}
+	&_img img {
+		display: block;
+		opacity: 1;
+		max-width: 100%;
+		-webkit-transition: all 0.7s ease-out;
+		-moz-transition: all 0.7s ease-out;
+		-ms-transition: all 0.7s ease-out;
+		-o-transition: all 0.7s ease-out;
+		transition: all 0.7s ease-out;
+	}
+	&_link:hover .portfolio__gallery_img figcaption {
+		bottom: 0;
+		left: 0
+	}
+	&_link:hover .portfolio__gallery_img img {
+		-moz-transform: scale(1.15);
+		-webkit-transform: scale(1.15);
+		-o-transform: scale(1.15);
+		-ms-transform: scale(1.15);
+		transform: scale(1.15);
+		opacity: 0.6;
+	}
+}
+
+.logos {
+	margin-bottom: 100px;
+}
+
+.logos__title {
+	@extend .portfolio__title;
+	margin: 100px 0;
+}
+
+.logos__block {
+	justify-content: space-between;
+	display: flex;
+	align-items: center;
+	img {
+		opacity: 0.6;
+	}
+	img:hover {
+		transform: scale(1.1);
+		opacity: 1;
+	}
+}
+
+.reviews {
+	background-color: #f5f5f5;
+	&__title {
+		@extend .portfolio__title;
+		margin: 50px 0;
+	}
+	&__text {
+		font-family: $font-descr;
+		font-size: 18px;
+		color: $title-color;
+	}
+	&__author {
+		font-family: $section-title;
+		font-size: 20px;
+	}
+}
+#quote-carousel .carousel-control {
+	background: none;
+	text-shadow: none;
+	color: #CACACA;
+	font-size: 2.3em;
+}
+
+#quote-carousel .carousel-indicators {
+	position: relative;
+	right: 50%;
+	top: auto;
+	bottom: 0;
+	margin-top: 20px;
+	margin-right: -20px;
+}
+
+#quote-carousel .carousel-indicators .active {
+	display: inline-block;
+	width: 120px;
+	height: 120px;
+	opacity: 1;
+	position: relative;
+	overflow: hidden;
+}
+
+#quote-carousel .carousel-indicators li {
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	display: inline-block;
+	opacity: 0.4;
+	vertical-align: middle;
+	position: relative;
+	overflow: hidden;
+}
+
+.owl-buttons {
+	display: none;
+}
